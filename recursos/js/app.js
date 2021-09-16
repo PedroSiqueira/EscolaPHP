@@ -1,3 +1,4 @@
 $(document).ready(function () {
-    $('.sidenav').sidenav({ edge: 'right' });
+    $('.sidenav').sidenav();
+    $('#mobile-demo.sidenav').sidenav({ edge: 'right' });
 });
