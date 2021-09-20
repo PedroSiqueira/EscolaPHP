@@ -21,7 +21,7 @@
             <div class="nav-wrapper green">
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <a href="/escola" class="brand-logo">Escola</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">keyboard_arrow_left</i></a>
+                <a href="#" data-target="mobile-demo" class="dropdown-trigger hide-on-large-only right"><i class="material-icons">more_vert</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="sass.html">Sass</a></li>
                     <li><a href="badges.html">Components</a></li>
@@ -31,7 +31,7 @@
             </div>
         </nav>
 
-        <ul class="sidenav" id="mobile-demo">
+        <ul class="dropdown-content" id="mobile-demo">
             <li><a href="sass.html">Sass</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">Javascript</a></li>
