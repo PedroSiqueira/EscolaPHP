@@ -6,7 +6,7 @@ include_once "../includes/head.php";
 $mysqli = new mysqli('localhost', 'root', '', 'escola');
 
 // cria uma consulta sql
-$query = 'SELECT * FROM estudantes';
+$query = 'SELECT id, nome, email FROM estudantes';
 
 // executa a consulta sql no banco de dados
 $result = $mysqli->query($query);
@@ -39,7 +39,7 @@ $result = $mysqli->query($query);
                     <td>
                         <div class="row">
                             <div class="col">
-                                <a class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
+                                <a href="ver.php?id=<?php echo $estudante->id ?>" class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
                             </div>
                             <div class="col">
                                 <a class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
