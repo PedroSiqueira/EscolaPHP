@@ -1,5 +1,5 @@
 <?php include_once "includes/head.php" ?>
 
-Seja bem vindo!
+Seja bem vindoooooooo!
 
 <?php include_once "includes/tail.php" ?>

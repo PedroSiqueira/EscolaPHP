@@ -11,7 +11,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Hello World!</title>
+    <title>Sistema Acadêmico</title>
     <link rel="shortcut icon" type="image/jpg" href="/EscolaPHP/recursos/img/favicon.ico" />
 </head>
 
@@ -39,7 +39,7 @@
         </ul>
 
         <ul id="slide-out" class="sidenav sidenav-fixed">
-            <li><a href="#!">First Sidebar Link</a></li>
+            <li><a href="estudante">Estudantes</a></li>
             <li><a href="#!">Second Sidebar Link</a></li>
         </ul>
     </header>

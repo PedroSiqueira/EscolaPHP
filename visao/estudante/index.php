@@ -1,9 +1,22 @@
-<?php include_once "../includes/head.php" ?>
+<?php
+
+include_once "../includes/head.php";
+
+// cria um objeto que se conecta ao banco de dados
+$mysqli = new mysqli('localhost', 'root', '', 'escola');
+
+// cria uma consulta sql
+$query = 'SELECT * FROM estudantes';
+
+// executa a consulta sql no banco de dados
+$result = $mysqli->query($query);
+
+?>
 
 <div class="section">
     <h3>Estudantes</h3>
 
-    <a class="waves-effect waves-light btn green darken-1"><i class="material-icons left">add</i>Cadastrar Estudante</a>
+    <a href="criar.php" class="waves-effect waves-light btn green darken-1"><i class="material-icons left">add</i>Cadastrar Estudante</a>
 </div>
 
 <div class="section">
@@ -18,60 +31,26 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>-</td>
-                <td>Alvin</td>
-                <td>alvin@eclair</td>
-                <td>
-                    <div class="row">
-                        <div class="col">
-                            <a class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
+            <?php while ($estudante = $result->fetch_object()) { ?>
+                <tr>
+                    <td>-</td>
+                    <td><?php echo $estudante->nome; ?></td>
+                    <td><?php echo $estudante->email; ?></td>
+                    <td>
+                        <div class="row">
+                            <div class="col">
+                                <a class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
+                            </div>
+                            <div class="col">
+                                <a class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
+                            </div>
+                            <div class="col">
+                                <a class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
+                            </div>
                         </div>
-                        <div class="col">
-                            <a class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
-                        </div>
-                        <div class="col">
-                            <a class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>-</td>
-                <td>Alan</td>
-                <td>alan@jellybean</td>
-                <td>
-                    <div class="row">
-                        <div class="col">
-                            <a class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
-                        </div>
-                        <div class="col">
-                            <a class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
-                        </div>
-                        <div class="col">
-                            <a class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>-</td>
-                <td>Jonathan</td>
-                <td>jonathan@lollipop</td>
-                <td>
-                    <div class="row">
-                        <div class="col">
-                            <a class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
-                        </div>
-                        <div class="col">
-                            <a class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
-                        </div>
-                        <div class="col">
-                            <a class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+                    </td>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 </div>
