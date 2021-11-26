@@ -1,32 +1,17 @@
 <?php
 
 include_once "../includes/head.php";
+include_once "../../modelo/banco.php";
 
 $id = $_GET["id"];
-
-// cria um objeto que se conecta ao banco de dados
-$mysqli = new mysqli('localhost', 'root', '', 'escola');
 
 // cria uma consulta sql
 $query = 'SELECT * FROM estudantes WHERE id=?';
 
-// cria um objeto 'statement'
-$stmt = $mysqli->stmt_init();
-
-// prepara um comando para execução
-$stmt->prepare($query);
-
-// ligar os parâmetros do comando às variáveis
-$stmt->bind_param("i", $id);
-
-// executa o comando sql
-$stmt->execute();
-
-// obtém o resultado do comando sql executado
-$result = $stmt->get_result();
+$resultado = executaSQL($query, "i", $id);
 
 // pega o próximo objeto do resultado
-$estudante = $result->fetch_object();
+$estudante = $resultado->fetch_object();
 
 ?>
 

@@ -3,24 +3,24 @@
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card grey lighten-5">
-            <form>
+            <form method="POST" action="/EscolaPHP/controladores/estudante/criar.php">
                 <div class="card-content">
                     <span class="card-title">Cadastrar Estudante</span>
 
                     <div class="input-field">
-                        <input id="nome" type="text" class="validate">
+                        <input id="nome" type="text" name="nome" class="validate">
                         <label for="nome">Nome Completo</label>
                     </div>
                     <div class="input-field">
-                        <input id="email" type="email" class="validate">
+                        <input id="email" type="email" name="email" class="validate">
                         <label for="email">E-mail</label>
                     </div>
                     <div class="input-field">
-                        <input id="cpf" type="number" class="validate">
+                        <input id="cpf" type="number" name="cpf" class="validate">
                         <label for="cpf">CPF</label>
                     </div>
                     <div class="input-field">
-                        <input id="nascimento" type="date" class="validate">
+                        <input id="nascimento" type="date" name="nascimento" class="validate">
                         <label for="nascimento">Data de Nascimento</label>
                     </div>
                 </div>

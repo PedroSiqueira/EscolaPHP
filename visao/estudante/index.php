@@ -1,15 +1,13 @@
 <?php
 
 include_once "../includes/head.php";
-
-// cria um objeto que se conecta ao banco de dados
-$mysqli = new mysqli('localhost', 'root', '', 'escola');
+include_once "../../modelo/banco.php";
 
 // cria uma consulta sql
 $query = 'SELECT id, nome, email FROM estudantes';
 
 // executa a consulta sql no banco de dados
-$result = $mysqli->query($query);
+$result = executaSQL($query);
 
 ?>
 
