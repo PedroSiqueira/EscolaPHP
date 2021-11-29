@@ -40,7 +40,7 @@ $result = executaSQL($query);
                                 <a href="ver.php?id=<?php echo $estudante->id ?>" class="waves-effect waves-light btn green darken-1"><i class="material-icons left">visibility</i>Ver</a>
                             </div>
                             <div class="col">
-                                <a class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
+                                <a href="editar.php?id=<?php echo $estudante->id ?>" class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
                             </div>
                             <div class="col">
                                 <a class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
