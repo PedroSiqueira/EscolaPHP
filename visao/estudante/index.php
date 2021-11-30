@@ -43,7 +43,7 @@ $result = executaSQL($query);
                                 <a href="editar.php?id=<?php echo $estudante->id ?>" class="waves-effect waves-light btn yellow darken-1"><i class="material-icons left">edit</i>Editar</a>
                             </div>
                             <div class="col">
-                                <a class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
+                                <a onclick="excluir(<?php echo $estudante->id ?>)" class="waves-effect waves-light btn red darken-1"><i class="material-icons left">delete</i>Excluir</a>
                             </div>
                         </div>
                     </td>
@@ -52,5 +52,14 @@ $result = executaSQL($query);
         </tbody>
     </table>
 </div>
+
+<script>
+    function excluir(id) {
+        if (confirm("Você tem certeza?")) {
+            window.location.href =
+"/EscolaPHP/controladores/estudante/excluir.php?id=" + id;
+        }
+    }
+</script>
 
 <?php include_once "../includes/tail.php" ?>
