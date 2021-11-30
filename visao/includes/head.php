@@ -40,7 +40,7 @@
 
         <ul id="slide-out" class="sidenav sidenav-fixed">
             <li><a href="/EscolaPHP/visao/estudante/">Estudantes</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+            <li><a href="/EscolaPHP/visao/professor/">Professores</a></li>
         </ul>
     </header>
 
